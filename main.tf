@@ -17,6 +17,7 @@ resource "azurerm_container_registry" "cr" {
   location            = "${azurerm_resource_group.rg.location}"
   admin_enabled       = true
   sku                 = "${var.sku}"
-# only works if Sku = Classic
-#  storage_account_id  = "${azurerm_storage_account.rg.id}"
+
+  # only works if Sku = Classic
+  #  storage_account_id  = "${azurerm_storage_account.rg.id}"
 }
